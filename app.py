@@ -18,9 +18,17 @@ def get_all():
   res = engine.execute("select * from log_data").fetchall()
   res_df = pd.DataFrame(res)
   res_df.columns = ["Automated","Severity","Type","Created","Closed",	"Closereason","Openduration"]
+  new_df = res_df.groupby("Automated")["Closed"].count().reset_index()
+  new_df.columns = ["Ticket Closed by", "# of Tickets"]
+  
+  print(new_df)
+  # return {"Ticket Closed by":list(new_df["Ticket Closed by"]),
+  # "# of Tickets":list(new_df["# of Tickets"])
+  
+  # }
+  return jsonify(tickets_closed_by=list(new_df["Ticket Closed by"]),num_tickets=list(new_df["# of Tickets"]))
 
-  # print(res_df)
-  return res_df.to_json()
+
 
 if __name__ == "__main__":
   app.run()
