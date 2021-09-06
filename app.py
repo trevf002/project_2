@@ -17,8 +17,8 @@ def index():
 def get_all():
   res = engine.execute("select * from log_data").fetchall()
   res_df = pd.DataFrame(res)
-  res_df.columns = ["Automated","Severity","Type","Created","Closed",	"Closereason","Openduration"]
-  new_df = res_df.groupby("Automated")["Closed"].count().reset_index()
+  res_df.columns = ["Closing_User_ID","Severity","Type","Created","Closed",	"Close_Reason","Open_Duration"]
+  new_df = res_df.groupby("Closing_User_ID")["Closed"].count().reset_index()
   new_df.columns = ["Ticket Closed by", "# of Tickets"]
   
   print(new_df)
