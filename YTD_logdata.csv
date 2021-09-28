@@ -1,4 +1,4 @@
-closingUserId,severity,type,created,closed,closeReason,openDuration
+Closing_User_Id,Severity,Type,Created,Closed,Close_Reason,Open_Duration
 keenen.roberts@warnermedia.com,Medium,Storm,"Mon, 06 Sep 2021 20:20:08 UTC","Mon, 06 Sep 2021 20:21:41 UTC",Duplicate,93
 jesus.salcido@warnermedia.com,Medium,CBTH,"Mon, 06 Sep 2021 17:50:10 UTC","Mon, 06 Sep 2021 17:57:42 UTC",CAT 10 Confirmed activity,452
 andrew.x.williams@warnermedia.com,Medium,Storm,"Mon, 06 Sep 2021 17:40:09 UTC","Mon, 06 Sep 2021 19:49:56 UTC",CAT 10 Confirmed activity,7787
